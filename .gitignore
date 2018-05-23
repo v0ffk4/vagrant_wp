@@ -1,0 +1,92 @@
+# -----------------------------------------------------------------
+# Minimalistic .gitignore for WordPress
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm -r --cached`
+#
+# -----------------------------------------------------------------
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+
+# osx specific files
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+._*
+*.swp
+*.swo
+*.swn
+
+# ignore log files
+*.log
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore wp-config file as it stores password
+wp-config.php
+
+#ignore gfx directory
+_gfx/
+
+#ignore houdini directory
+_hou/
+
+#ignore database
+db/
+
+#ignore tmp
+tmp/
+TMP/
+
+#ignore raster media files
+*.jpg
+*.png
+*.mov
+*.jpg
+*.png
+*.mov
+
+#ignore vagrant
+.vagrant/
+
+#ignore node_modules directory
+node_modules/
+
+#ignore www directory
+www/
