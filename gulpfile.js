@@ -21,6 +21,7 @@ var gulp = require('gulp'),
 
 	// JS processing
 	browserify = require("browserify"),
+	babelify = require('babelify'),
 	uglify = require("gulp-uglify"),
 
 	//define directories
@@ -30,7 +31,7 @@ var gulp = require('gulp'),
 // Browser sync
 gulp.task('browserSync', function() {
     browserSync.init({
-        proxy: "http://www.sgtoursint.club",
+        proxy: "http://sgtoursint.club",
         //open: false
         open: "localhost:3000"
         //browser: "google chrome"
@@ -90,7 +91,10 @@ gulp.task( "jsAppPrep", function() {
 	// set up the browserify instance on a task basis
 	var b = browserify({
 		entries: dev + "app.js",
-		debug: true
+		debug: true,
+		transform: [babelify.configure({
+			presets: ['env']
+		})]
 	});
 	// return browserify
 	return b.bundle()
